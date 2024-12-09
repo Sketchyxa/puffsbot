@@ -10,8 +10,8 @@ from telegram.ext import (
 )
 import sqlite3
 
-ADMIN_USERNAME = "zzitraks"  # Username администратора
-ADMIN_CHAT_ID = 1037859537  # Ваш chat_id для уведомлений
+ADMIN_USERNAME = "-"  # Username администратора
+ADMIN_CHAT_ID = 1037851111  # Ваш chat_id для уведомлений
 
 # Статусы для ConversationHandler
 SELECT_FLAVOR, QUANTITY, CONTACT_INFO = range(3)
@@ -196,7 +196,7 @@ async def show_orders(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Основная функция запуска
 def main():
     initialize_db()
-    app = Application.builder().token("7534331911:AAFlUuVfxM3tr1Lz86Fm-WMfzhI4EkfRYwA").build()
+    app = Application.builder().token("токен").build()
 
     app.add_handler(CommandHandler('start', start))
     app.add_handler(CommandHandler('orders', show_orders))
